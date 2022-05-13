@@ -8,10 +8,25 @@ constructor(){
   super();
   this.state = {
     products: data.products,
+    cartItems: [],
     size:"",
-    sorts:"",
+    sort:"",
   };
 }
+
+addToCart = (product) => {
+  const cartItems = this.state.cartItems.slice();
+  let alreadyInCart = false;
+  cartItems.forEach((item) => {
+    if(item._id === product._id){
+      item.count++; 
+      alreadyInCart = true;
+    }
+  });
+  if(!alreadyInCart){
+    cartItems.push({ ...products , count: 1 });
+  }
+};
 sortProducts=(event)=>{
   //impl
   const sort = event.target.value;
