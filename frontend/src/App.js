@@ -16,6 +16,9 @@ constructor(){
     sort:"",
   };
 }
+createOrder = (order) => {
+  alert("Need to save order for" + order.name)
+}
 removeFromCart = (product) => {
   const cartItems = this.state.cartItems.slice();
   this.setState({
