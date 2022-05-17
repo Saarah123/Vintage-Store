@@ -14,7 +14,7 @@ useUnifiedTopology: true,
 });
 
 const Product = mongoose.model("products", new mongoose.Schema({
-    _id : {type: shortid.generate },
+    _id : {type:String ,default: shortid.generate },
     title:String,
     description:String,
     image:String,
