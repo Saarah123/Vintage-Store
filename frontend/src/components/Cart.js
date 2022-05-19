@@ -41,11 +41,11 @@ class Cart extends Component {
         )}
 
         {order && (
-          <Modal isOpen={true} onRequestClose={this.closeModal}>
-            <Zoom>
-              <button className="close-modal" onClick={this.closeModal}>
-                x
-              </button>
+          // <Modal isOpen={true} onRequestClose={this.closeModal}>
+          //   <Zoom>
+          //     <button className="close-modal" onClick={this.closeModal}>
+          //       x
+          //     </button>
               <div className="order-details">
                 <h3 className="success-message">Your order has been placed.</h3>
                 <h2>Order {order._id}</h2>
@@ -82,12 +82,12 @@ class Cart extends Component {
                   </li>
                 </ul>
               </div>
-            </Zoom>
-          </Modal>
+          //   </Zoom>
+          // </Modal>
         )}
         <div>
           <div className="cart">
-            <Fade left cascade>
+            {/* <Fade left cascade> */}
               <ul className="cart-items">
                 {cartItems.map((item) => (
                   <li key={item._id}>
@@ -109,7 +109,7 @@ class Cart extends Component {
                   </li>
                 ))}
               </ul>
-            </Fade>
+            {/* </Fade> */}
           </div>
           {cartItems.length !== 0 && (
             <div>
@@ -132,7 +132,7 @@ class Cart extends Component {
                 </div>
               </div>
               {this.state.showCheckout && (
-                <Fade right cascade>
+                // <Fade right cascade>
                   <div className="cart">
                     <form onSubmit={this.createOrder}>
                       <ul className="form-container">
@@ -171,7 +171,7 @@ class Cart extends Component {
                       </ul>
                     </form>
                   </div>
-                </Fade>
+                // </Fade>
               )}
             </div>
           )}
@@ -181,10 +181,11 @@ class Cart extends Component {
   }
 }
 
-export default connect(
-  (state) => ({
-    order: state.order.order,
-    cartItems: state.cart.cartItems,
-  }),
-  { removeFromCart, createOrder, clearOrder }
-)(Cart);
+// export default connect(
+//   (state) => ({
+//     order: state.order.order,
+//     cartItems: state.cart.cartItems,
+//   }),
+//   { removeFromCart, createOrder, clearOrder }
+// )(Cart);
+export default Cart;
