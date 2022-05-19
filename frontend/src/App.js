@@ -1,8 +1,11 @@
 import React from 'react';
-import Home from "./components/Home";
+import Shop from "./components/Shop";
 import { Routes, Route} from 'react-router-dom';
-import LandingPage from './components/LandingPage';
+import Home from './components/Home';
 import Navbar from './components/Navbar';
+import SignIn from './components/SignIn';
+
+
 
 
 export default function App() {
@@ -11,8 +14,11 @@ export default function App() {
    <>
    <Navbar/>
    <Routes>
-   <Route path = "/" element={ <LandingPage/>}/>
-     <Route path = "/Home" element={ <Home/>}/>
+   <Route path = "/" element={ <Home/>}/>
+     <Route path = "/Shop" element={ <Shop/>}/>
+     <Route path="/SignIn" element={<SignIn/>}/>
+     
+     
     
    </Routes>
   
