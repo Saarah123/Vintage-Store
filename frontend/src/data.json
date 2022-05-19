@@ -5,7 +5,7 @@
         "image": "https://th.bing.com/th/id/OIP.YTcaeSOGi7vfxsSRCVHEZgHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7 ",
         "title": "Midi sundress with shirring detail",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "L", "XL", "XXL"],
+        "availableSizes": ["XS", "L", "XL", "XXL"],
         "price": 29.9
       },
       {
@@ -13,7 +13,7 @@
         "image": "https://th.bing.com/th/id/OIP.t7SHrY0snOpd3ItITt4LzQHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7 ",
         "title": "Midi sundress with ruched front",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "M", "L"],
+        "availableSizes": [ "XS","S", "M", "L"],
         "price": 18.9
       },
       {
@@ -37,7 +37,7 @@
         "image": "https://th.bing.com/th/id/OIP.LGFX5EeIKDbzeT3Ja7Z1nAHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7",
         "title": "Frill mini dress in yellow polka dot",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "L", "XL"],
+        "availableSizes": ["S", "L", "XL"],
         "price": 10.9
       },
       {
@@ -45,7 +45,7 @@
         "image": "https://th.bing.com/th/id/OIP.uIZbJSzU0H19ADEwAx9wLAHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7 ",
         "title": "Midi tea dress in blue and red spot",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["XL", "XXL"],
+        "availableSizes": ["XL", "MS","XXL"],
         "price": 49.9
       },
       {
@@ -53,7 +53,7 @@
         "image": "data:image/jpeg;base64,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 ",
         "title": "Midi sundress with shirring detail",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "L", "XL", "XXL"],
+        "availableSizes": ["XS", "XXL"],
         "price": 29.9
       },
       {
@@ -61,7 +61,7 @@
         "image": "https://th.bing.com/th/id/OIP._InHFtFPQjFOLESrgTunpAHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7 ",
         "title": "Midi sundress with ruched front",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "M", "L"],
+        "availableSizes": ["S", "M", "L"],
         "price": 18.9
       },
       {
@@ -69,7 +69,7 @@
         "image": "https://th.bing.com/th/id/OIP.qLioro_E1-iyQ4cRztkrYwHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7 ",
         "title": "Midi dress in pink ditsy floral",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "M", "L"],
+        "availableSizes": ["XS", "M", "L"],
         "price": 14.9
       },
       {
@@ -85,7 +85,7 @@
         "image": "https://th.bing.com/th/id/OIP.HLEETBp0hHCsMu10CQ2O9gHaKu?w=184&h=267&c=7&r=0&o=5&pid=1.7",
         "title": "Frill mini dress in yellow polka dot",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "L", "XL"],
+        "availableSizes": ["M", "L", "XL"],
         "price": 10.9
       },
       {
