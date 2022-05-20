@@ -4,7 +4,7 @@ import { Toolbar } from "@material-ui/core";
 import Typography from '@mui/material/Typography';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-// import {SignIn} from "./SignIn";
+// import {SignUp} from "./SignUp";
 import "./Navbar.css";
 
 
@@ -28,7 +28,7 @@ return (
           <Link to = {"/Shop"} > <Button className="Shop" >SHOP</Button></Link> 
           </div>
           <div>
-          <Link to = {"/SignIn"} > <Button className="SignIn" >SIGN IN</Button></Link>
+          <Link to = {"/SignUp"} > <Button className="SignIn" >SIGN Up</Button></Link>
           </div>
           
           </div>

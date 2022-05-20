@@ -3,7 +3,9 @@ import Shop from "./components/Shop";
 import { Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
+import CheckOut from './components/CheckOut';
+
 
 
 
@@ -16,7 +18,9 @@ export default function App() {
    <Routes>
    <Route path = "/" element={ <Home/>}/>
      <Route path = "/Shop" element={ <Shop/>}/>
-     <Route path="/SignIn" element={<SignIn/>}/>
+     <Route path="/SignUp" element={<SignUp/>}/>
+     <Route path="/CheckOut" element={<CheckOut/>}/>
+     
      
      
     

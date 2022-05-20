@@ -6,6 +6,7 @@ const CheckOut = () => {
     return(
 
         <>
+        <h3>BUY HERE</h3>
         </>
     )
 }
