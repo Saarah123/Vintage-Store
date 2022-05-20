@@ -16,10 +16,11 @@
     height:460px;
     width:100%;
     border:1px solid black;
+    display : flex;
+    gap:none;
+    flex-direction: column;
 }
-.img{
-    
-}
+
 
 .footer{
     background-color:  rgba(5, 5, 49, 0.973);
