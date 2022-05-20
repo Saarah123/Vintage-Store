@@ -4,7 +4,7 @@ import { Toolbar } from "@material-ui/core";
 import Typography from '@mui/material/Typography';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-// import {SignUp} from "./SignUp";
+import {SignUp} from "./SignUp";
 import "./Navbar.css";
 
 

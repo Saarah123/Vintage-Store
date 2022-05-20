@@ -4,7 +4,7 @@ import { Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
-import CheckOut from './components/CheckOut';
+import Payment from './components/Payment';
 
 
 
@@ -19,7 +19,7 @@ export default function App() {
    <Route path = "/" element={ <Home/>}/>
      <Route path = "/Shop" element={ <Shop/>}/>
      <Route path="/SignUp" element={<SignUp/>}/>
-     <Route path="/CheckOut" element={<CheckOut/>}/>
+     <Route path="/Payment" element={<Payment/>}/>
      
      
      

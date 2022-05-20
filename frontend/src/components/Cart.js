@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import formatCurrency from '../util';
+import Payment from './Payment';
 
 class Cart extends Component {
   constructor(props) {
@@ -164,10 +166,10 @@ class Cart extends Component {
                           ></input>
                         </li>
                         <li>
-                          
-                          <button className="button primary" type="submit">
+                          <Link to={"/Payment"}><button className="button primary" type="submit">
                             Checkout
-                          </button>
+                          </button></Link>
+                         
                         </li>
                       </ul>
                     </form>

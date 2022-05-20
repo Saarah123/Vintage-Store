@@ -3,13 +3,15 @@
     gap:20px;
     font-size:14px;
     margin-left: 200px;
+    color:white;
 
 }
 .top{
-    height: 60px;
+    height: 40px;
     width:100%;
-    background-color: rgba(5, 5, 49, 0.973);
-    color:white;
+    background-color:rgb(255, 250, 181);
+    color:black;
+    padding:20px;
 }
 
 .body{
@@ -18,16 +20,40 @@
     border:1px solid black;
     display : flex;
     gap:none;
-    flex-direction: column;
+   
+}
+.body>img{
+     height:460px;
+    width:50%;
+
 }
 
 
 .footer{
-    background-color:  rgba(5, 5, 49, 0.973);
+    background-color:rgb(255, 248, 147);
     height:40px;
     width:100%;
-    color:white;
+    color:black;
     margin:auto;
+}
+.pay{
+    margin:auto;
+    height:200px;
+    width:40%;
+    font-size: 17px;
+    margin-top:50px;
+    border: 2px solid black;
+    padding:50px;
+}
+.btn{
+    height: 50px;
+    width:200px;
+    background-color: rgb(44, 90, 241);
+    color:black;
+    margin:auto;
+    border:transparent;
+    margin-left:43%;
+    margin-top: 15px;
 }
 
 
