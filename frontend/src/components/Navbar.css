@@ -17,7 +17,7 @@
 .body{
     height:460px;
     width:100%;
-    border:1px solid black;
+    border:1px transparent;
     display : flex;
     gap:none;
    

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -41,6 +42,11 @@ export default function SignUp() {
     });
   };
 
+  const[FirstName, setFirstName] =  useState("");
+  const[LastName, setLastName] = useState("");
+  const[Email, setEmail] = useState("");
+  const[Password,setPassword] = useState("");
+
   return (
     
     <ThemeProvider theme={theme}>
@@ -74,6 +80,8 @@ export default function SignUp() {
                   fullWidth
                   id="firstName"
                   label="First Name"
+                  value={FirstName}
+                  onChange = {(e) => setFirstName(e.target.value)}
                   autoFocus
                 />
               </Grid>
@@ -84,6 +92,8 @@ export default function SignUp() {
                   id="lastName"
                   label="Last Name"
                   name="lastName"
+                  value={LastName}
+                  onChange = {(e) => setLastName(e.target.value)}
                   autoComplete="family-name"
                 />
               </Grid>
@@ -94,6 +104,8 @@ export default function SignUp() {
                   id="email"
                   label="Email Address"
                   name="email"
+                  value={Email}
+                  onChange = {(e) => setEmail(e.target.value)}
                   autoComplete="email"
                 />
               </Grid>
@@ -105,6 +117,8 @@ export default function SignUp() {
                   label="Password"
                   type="password"
                   id="password"
+                  value={Password}
+                  onChange = {(e) => setPassword(e.target.value)}
                   autoComplete="new-password"
                 />
               </Grid>
