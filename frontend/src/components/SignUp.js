@@ -50,8 +50,10 @@ export default function SignUp() {
   return (
     
     <ThemeProvider theme={theme}>
+    
+
        <div className='top'>
-     ABOUT
+    <h3>ABOUT</h3> 
     </div>
     
       <Container component="main" maxWidth="xs">
@@ -153,7 +155,8 @@ export default function SignUp() {
         
       </Container>
       <div className='footer'>
-      All right is reserved .
+        <b>   All right is reserved .</b>
+     
     </div>
     
     </ThemeProvider>

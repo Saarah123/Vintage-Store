@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import formatCurrency from '../util';
 import Payment from './Payment';
+import { Fade } from '@mui/material';
 
 class Cart extends Component {
   constructor(props) {
@@ -184,11 +185,5 @@ class Cart extends Component {
   }
 }
 
-// export default connect(
-//   (state) => ({
-//     order: state.order.order,
-//     cartItems: state.cart.cartItems,
-//   }),
-//   { removeFromCart, createOrder, clearOrder }
-// )(Cart);
+
 export default Cart;

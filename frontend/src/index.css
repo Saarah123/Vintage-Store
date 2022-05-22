@@ -93,6 +93,9 @@ footer {
   max-width: 37rem;
   max-height: 37rem;
 }
+.product:hover img{
+  transform: scale(1.5);
+}
 .product-price {
   display: flex;
   justify-content: space-between;

@@ -73,8 +73,8 @@ const Payment = () => {
       </Grid>
       </div>
       <Link to ={"/SignUp"}><button className="btn">Sign Up</button></Link>
-      <div className='footer'>
-      All right is reserved .
+      <div className='payfoot'>
+     <b> All right is reserved .</b>
     </div>
     
         </>

@@ -10,6 +10,7 @@ import Payment from './components/Payment';
 
 
 
+
 export default function App() {
   
   return (
@@ -20,6 +21,7 @@ export default function App() {
      <Route path = "/Shop" element={ <Shop/>}/>
      <Route path="/SignUp" element={<SignUp/>}/>
      <Route path="/Payment" element={<Payment/>}/>
+     
      
      
      
