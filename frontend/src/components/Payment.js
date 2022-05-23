@@ -16,8 +16,8 @@ const Payment = () => {
 
         <>
         <div className='top'>
-     ABOUT
-    </div>
+        <a href=" https://vintagedancer.com/1950s/1950s-fashion-women-get-look/ " target="_blank" rel="noopener noreferrer"><h3><b>ABOUT</b></h3></a>
+        </div>
         <div className="pay">
         <Typography variant="h6" gutterBottom>
         Payment method

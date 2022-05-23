@@ -93,7 +93,7 @@ export default class Shop extends Component {
              
         
               <header>
-                <a href = "/">React shopping Cart</a>
+                <a href = "/">HOME</a>
               </header>
               <main>
                 <div className="content">

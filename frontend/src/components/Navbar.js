@@ -12,7 +12,7 @@ return (
   <div className="Navbar">
     <div className="left">
 
-      <h1 className="label">SAKSHI'S   STORE</h1>
+      <h3 className="label">SAKSHI'S VINTAGE STORE</h3>
     </div>
      
          <div className="right">

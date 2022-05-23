@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
     <div className='top'>
-      <h3><b>ABOUT</b></h3>
+    <a href=" https://vintagedancer.com/1950s/1950s-fashion-women-get-look/ " target="_blank" rel="noopener noreferrer"><h3><b>ABOUT</b></h3></a>
      
     </div>
   
