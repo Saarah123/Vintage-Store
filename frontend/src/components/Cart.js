@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import formatCurrency from '../util';
-import Payment from './Payment';
+// import Payment from './Payment';
 import { Fade } from '@mui/material';
 
 class Cart extends Component {

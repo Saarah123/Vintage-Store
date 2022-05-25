@@ -6,12 +6,9 @@ const shortid = require("shortid");
 const app =express();
 app.use(bodyParser);
 
-mongoose.connect("mongodb://localhost/fronted-db",{
-useNewUrlParser: true,
-useCreateIndex: trueALPNProtocols,
-useUnifiedTopology: true,
+mongoose.connect("mongodb+srv://Saarah123:Saarah123@cluster0.rfxi2.mongodb.net/?retryWrites=true&w=majority"
 
-});
+);
 
 const Product = mongoose.model("products", new mongoose.Schema({
     _id : {type:String ,default: shortid.generate },
@@ -26,7 +23,7 @@ const Product = mongoose.model("products", new mongoose.Schema({
 
 app.get("/api/products", async(req,res) => {
 
-    const products = await Products.find({});
+    const products = await products.find({});
     res.send(products);
 });
 

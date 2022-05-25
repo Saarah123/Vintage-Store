@@ -18,6 +18,7 @@ const Payment = () => {
         <div className='top'>
         <a href=" https://vintagedancer.com/1950s/1950s-fashion-women-get-look/ " target="_blank" rel="noopener noreferrer"><h3><b>ABOUT</b></h3></a>
         </div>
+        <div className="cc">
         <div className="pay">
         <Typography variant="h6" gutterBottom>
         Payment method
@@ -73,9 +74,12 @@ const Payment = () => {
       </Grid>
       </div>
       <Link to ={"/SignUp"}><button className="btn">Sign Up</button></Link>
-      <div className='payfoot'>
+      {/* <div className='payfoot'>
      <b> All right is reserved .</b>
-    </div>
+    </div> */}
+      </div>
+      
+      
     
         </>
     )

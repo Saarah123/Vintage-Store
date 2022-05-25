@@ -17,13 +17,13 @@ return (
      
          <div className="right">
           <div>
-          <Link to = {"/"} > <Button className="shop" >HOME</Button></Link> 
+          <Link to = {"/"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >HOME</Button></Link> 
           </div>
             <div>
-          <Link to = {"/Shop"} > <Button className="Shopz" >SHOP</Button></Link> 
+          <Link to = {"/Shop"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >SHOP</Button></Link> 
           </div>
           <div>
-          <Link to = {"/SignUp"} > <Button className="Shopx" >SIGN UP</Button></Link>
+          <Link to = {"/SignUp"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >SIGN UP</Button></Link>
           </div>
           
           </div> 

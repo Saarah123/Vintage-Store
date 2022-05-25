@@ -2,14 +2,15 @@
     display:flex;
     background-color: black;
     height:80px;
-    width:auto;
+    width:100%;
 }
 .label{
     margin-left:6%;
+    font-weight:700;
 }
 .left{
     height:80px;
-    width:30%;
+    width:40%;
     color:black;
     background-color: aliceblue;
   
@@ -18,17 +19,19 @@
 
 .right{
     display:flex;
-    gap:20px;
+    gap:15px;
     font-size:14px;
     color:white;
     padding:20px;
     margin-left:40%;
+    width:60%;
+    background-color: black;
 
 }
 
 .shop:hover{
-    background-color: aqua;
-    font-size: 17px;
+    color: blueviolet;
+    transform:scale(1.25);
 }
 
 .top{
@@ -59,18 +62,18 @@
 .footer{
     background-color:rgb(255, 248, 147);
     height:40px;
-    width:auto;
+    width:100%;
     color:black;
     margin:auto;
     margin-top:3%;
 }
-.payfoot{
-    background-color:rgb(255, 248, 147);
-    height:40px;
-    width:auto;
-    color:black;
-    margin:auto;
-    margin-top:7%;
+
+.cc{
+    height:500px;
+    width:100%;
+    border: transparent 1px solid;
+    margin-top:1%;
+    background-color: pink;
 }
 .pay{
     margin:auto;
@@ -78,13 +81,22 @@
     width:40%;
     font-size: 17px;
     margin-top:50px;
-    border: 2px solid black;
+    border: 1px solid aliceblue;;
     padding:50px;
+    background-color: white;
+}
+.payfoot{
+    background-color:rgb(255, 248, 147);
+    height:40px;
+    width:auto;
+    color:black;
+    margin:100%;
+    margin-top:7%;
 }
 .btn{
     height: 50px;
     width:200px;
-    background-color: rgb(44, 90, 241);
+    background-color:rgb(192, 219, 243);
     color:black;
     margin:auto;
     border:transparent;
@@ -93,8 +105,42 @@
 }
 .btn:hover{
     
-    background-color: rgb(226, 24, 24);
+    background-color: rgb(59, 214, 235);
+    transform:scale(1.25);
     
 }
-
-
+/* media queries */
+/* 
+@media (max-width: 768px) {
+    .top { 
+     display:none;
+     position: absolute;
+     background-color:teal;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+    }
+    /* .menu li:hover {
+     display: inline-block;
+     background-color:#4c9e9e;
+     transition: 0.3s ease;
+    }
+    .menu li + li {
+     margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+     display: block;
+    }
+    .hamburger {
+     display: block;
+    }
+    .dropdown {
+     left: 50%;
+     top: 30px;
+     transform: translateX(35%);
+    }
+    .dropdown li:hover {
+     background-color: #4c9e9e;
+    }
+    } */ 
