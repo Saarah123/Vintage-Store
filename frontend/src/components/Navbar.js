@@ -25,7 +25,9 @@ return (
           <div>
           <Link to = {"/SignUp"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >SIGN UP</Button></Link>
           </div>
-          
+          <div>
+          <Link to = {"/Cart"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="cart" >CART</Button></Link>
+          </div>
           </div> 
        
        </div>

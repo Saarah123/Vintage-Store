@@ -5,6 +5,9 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
 import Payment from './components/Payment';
+import { ProductDetail } from './components/ProductDetail';
+import Cart from './components/Cart';
+import CheckOut from './components/CheckOut';
 
 
 
@@ -21,6 +24,9 @@ export default function App() {
      <Route path = "/Shop" element={ <Shop/>}/>
      <Route path="/SignUp" element={<SignUp/>}/>
      <Route path="/Payment" element={<Payment/>}/>
+     <Route path="/ProductDetail/:id" element={<ProductDetail/>}/>
+     <Route path="/CheckOut" element={<CheckOut/>}/>
+     <Route path="/Cart" element={<Cart/>}/>
      
      
      
