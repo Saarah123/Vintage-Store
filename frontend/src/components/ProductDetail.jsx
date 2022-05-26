@@ -31,7 +31,7 @@ axios.get(`http://localhost:5050/products/${id}`).then((res)=>{
             category:data.category
             
         }
-        axios.post("http://localhost:5050/cart",payload).then((res)=>{
+        axios.post("https://sakshi-store.herokuapp.com/cart",payload).then((res)=>{
             console.log(res)
             navigate("/Cart")
         }).catch((err)=>{

@@ -15,7 +15,7 @@ const Cart = () => {
  },[])
 
  const handlecart=()=>{
-    axios.get("http://localhost:5050/cart").then((res)=>{
+    axios.get("https://sakshi-store.herokuapp.com/cart").then((res)=>{
         console.log(res)
         setData(res.data)
     }).catch((err)=>{
@@ -25,7 +25,7 @@ const Cart = () => {
 
 
  const Delete=(id)=>{
-     axios.delete(`http://localhost:5050/cart/${id}`).then((res)=>{
+     axios.delete(`https://sakshi-store.herokuapp.com/cart/${id}`).then((res)=>{
          
          handlecart()
 

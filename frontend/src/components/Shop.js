@@ -16,7 +16,7 @@ export const Shop = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:5050/products").then(({ data }) => {
+    axios.get("https://sakshi-store.herokuapp.com/products").then(({ data }) => {
     dispatch(ProductData(data)); 
     });
   }, []);
