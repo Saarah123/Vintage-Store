@@ -62,7 +62,7 @@ console.log(price)
                 <p1><b>{e.price}</b></p1>
             </div>
             <div style={{marginTop:"8%"}}>
-            <button onClick={()=>Delete(e.id)}>REMOVE</button>
+            <button style={{marginTop:"5%", bgcolor:"blue"}} onClick={()=>Delete(e.id)}>REMOVE</button>
             </div>
 </div>
     ))}

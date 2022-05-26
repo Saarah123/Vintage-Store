@@ -21,7 +21,7 @@ const Sidebar = () => {
   const handleSorted = (query) => {
     axios
       .get(
-        `http://localhost:5050/products?_sort=price&_order=${query}`
+        `https://sakshi-store.herokuapp.com/products?_sort=price&_order=${query}`
       )
       .then(({ data }) => {
        dispatch(ProductData(data))
@@ -30,14 +30,14 @@ const Sidebar = () => {
   };
   const handleSortedData = (order) => {
     axios
-      .get(`http://localhost:5050/products?category=${order}`)
+      .get(`https://sakshi-store.herokuapp.com/products?category=${order}`)
       .then(({ data }) => {
        console.log(data)
        dispatch(ProductData(data))
       });
   };
   const handleAllData = () => {
-    axios.get(`http://localhost:5050/products`).then(({ data }) => {
+    axios.get(`https://sakshi-store.herokuapp.com/products`).then(({ data }) => {
      
     });
   };

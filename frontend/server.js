@@ -40,4 +40,4 @@ app.delete("/api/products/:id", async(req, res) => {
 });
 
  const port = process.env.PORT || 5000;
- app.listen(port,() => console.log("serve at https://localhost:5000")); 
+ app.listen(port,() => console.log("serve at https://sakshi-store.herokuapp.com ")); 

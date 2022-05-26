@@ -12,7 +12,7 @@ const [data,setData]=useState({})
     const {id} = useParams()
 
     useEffect(()=>{
-axios.get(`http://localhost:5050/products/${id}`).then((res)=>{
+axios.get(`https://sakshi-store.herokuapp.com/products/${id}`).then((res)=>{
     console.log(res)
     setData(res.data)
 }).catch((err)=>{
