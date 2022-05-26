@@ -10,31 +10,34 @@ import {
   Stack,
 } from "@mui/material";
 import React from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import axios from "axios";
+import { ProductData } from "../redux/action";
 
 
 const Sidebar = () => {
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  const handleSortedData = (query) => {
+  const handleSorted = (query) => {
     axios
       .get(
-        `https://ecommerce-masai.herokuapp.com/sortbycategory?sorttype=category&sortdirection=${query}`
+        `http://localhost:5050/products?_sort=price&_order=${query}`
       )
       .then(({ data }) => {
+       dispatch(ProductData(data))
         
       });
   };
-  const handleSorted = (order) => {
+  const handleSortedData = (order) => {
     axios
-      .get(`https://ecommerce-masai.herokuapp.com/sort?sorttype=price&sortdirection=${order}`)
+      .get(`http://localhost:5050/products?category=${order}`)
       .then(({ data }) => {
-       
+       console.log(data)
+       dispatch(ProductData(data))
       });
   };
   const handleAllData = () => {
-    axios.get(`https://ecommerce-masai.herokuapp.com/products`).then(({ data }) => {
+    axios.get(`http://localhost:5050/products`).then(({ data }) => {
      
     });
   };
@@ -59,7 +62,7 @@ const Sidebar = () => {
               </ListItemIcon>
               <ListItemText
                 primary="Men's wear"
-                onClick={() => handleSortedData("men's clothing")}
+                onClick={() => handleSortedData("Men")}
                 sx={{fontSize:"25px"}} 
               />
             </ListItemButton>
@@ -71,7 +74,7 @@ const Sidebar = () => {
               </ListItemIcon>
               <ListItemText
                 primary="Women's wear"
-                onClick={() => handleSortedData("jewelery")}
+                onClick={() => handleSortedData("Women")}
               />
             </ListItemButton>
           </ListItem>
@@ -82,7 +85,7 @@ const Sidebar = () => {
               </ListItemIcon>
               <ListItemText
                 primary="Electronics"
-                onClick={() => handleSortedData("electronics")}
+                onClick={() => handleSortedData("Electronics")}
                  size="large"
               />
             </ListItemButton>

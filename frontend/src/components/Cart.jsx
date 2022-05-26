@@ -1,10 +1,48 @@
 import { bgcolor } from '@mui/system';
-import react from 'react';
+import react,{useEffect,useState} from 'react';
 import "./Navbar.css";
 import {Link} from "react-router-dom";
-
+import axios from "axios"
 
 const Cart = () => {
+
+
+    const [data,setData] = useState([])
+
+ useEffect(()=>{
+    handlecart()
+   
+ },[])
+
+ const handlecart=()=>{
+    axios.get("http://localhost:5050/cart").then((res)=>{
+        console.log(res)
+        setData(res.data)
+    }).catch((err)=>{
+        console.log(err)
+    })
+ }
+
+
+ const Delete=(id)=>{
+     axios.delete(`http://localhost:5050/cart/${id}`).then((res)=>{
+         
+         handlecart()
+
+     }).catch((err) => {
+         console.log(err)
+     })
+ }
+ const price  = data.reduce((acc,curr)=>{
+        
+    return Math.floor(acc + +curr.price)
+
+},0)
+
+console.log(price)
+
+
+
     return(
 <>
 <div className='top'>
@@ -13,13 +51,26 @@ const Cart = () => {
     </div>
     <div className='body1'>
         <div className='cart' >
-<div className='left'>
-    <p1>ITEM</p1>
+    {data.map((e)=>(
+        <div className='left'>
+            <div   className="img">
+                <h3>ITEM</h3>
+                <img style={{width:"130px" , height:"200px",marginTop:"20%" }} src={e.image} alt="" />
+            </div>
+            <div className="details">
+                <p1>{e.title}</p1>
+            </div>
+            <button onClick={()=>Delete(e.id)}>REMOVE</button>
 </div>
+    ))}
+
+
 <div className='right'>
     <p1>PRICE</p1>
     <p1>QUANTITY</p1>
-    <p1>TOTAL</p1>
+    <p1>TOTAL :- {price}</p1>
+
+    
 </div>
         </div>
     </div>

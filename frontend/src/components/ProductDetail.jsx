@@ -2,9 +2,11 @@ import react, { useEffect,useState } from 'react';
 import "./Navbar.css";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
-import {Link}  from 'react-router-dom';
+import {useNavigate}  from 'react-router-dom';
 
  export const ProductDetail = () => {
+
+    const navigate = useNavigate()
 
 const [data,setData]=useState({})
     const {id} = useParams()
@@ -17,6 +19,26 @@ axios.get(`http://localhost:5050/products/${id}`).then((res)=>{
     console.log(err)
 })
     },[])
+
+
+    const handleCart = ()=>{
+
+        const payload={
+            title:data.title,
+            image:data.image,
+            description:data.description,
+            price:data.price,
+            category:data.category
+            
+        }
+        axios.post("http://localhost:5050/cart",payload).then((res)=>{
+            console.log(res)
+            navigate("/Cart")
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
+
 console.log(data)
     return(
         <>
@@ -31,13 +53,11 @@ console.log(data)
                    <img src={data.image} style={{width:"100%",height:"100%",objectFit:"cover"}} alt="" />
                </div>
                <div className='detail2'>
-<h3>{data.title}</h3>
-<p>{data.description}</p>
-<h3>$ {data.price}</h3>
+                <h3>{data.title}</h3>
+                <p>{data.description}</p>
+                <h3>$ {data.price}</h3>
 
-<Link to = "/Cart">
-<button className='btn'>Add to cart</button>
-</Link>
+<button className='btn' onClick={handleCart}>Add to cart</button>
 
 
                </div>
