@@ -55,12 +55,15 @@ console.log(price)
         <div className='left'>
             <div   className="img">
                 <h3>ITEM</h3>
-                <img style={{width:"130px" , height:"200px",marginTop:"20%" }} src={e.image} alt="" />
+                <img style={{width:"130px" , height:"220px",marginTop:"16%" }} src={e.image} alt="" />
             </div>
             <div className="details">
-                <p1>{e.title}</p1>
+                <p1>{e.title}</p1><br/>
+                <p1><b>{e.price}</b></p1>
             </div>
+            <div style={{marginTop:"8%"}}>
             <button onClick={()=>Delete(e.id)}>REMOVE</button>
+            </div>
 </div>
     ))}
 
