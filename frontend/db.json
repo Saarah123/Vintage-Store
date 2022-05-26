@@ -307,28 +307,12 @@
   ],
   "cart": [
     {
-      "title": "Midi sundress with ruched front",
-      "image": "https://th.bing.com/th/id/OIP.t7SHrY0snOpd3ItITt4LzQHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7 ",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "price": 18.9,
-      "category": "Women",
-      "id": 1
-    },
-    {
       "title": "Midi dress in pink ditsy floral",
       "image": " https://th.bing.com/th/id/OIP.AP5cf8vwmm-dszMBKpBZSAHaLz?w=184&h=294&c=7&r=0&o=5&pid=1.7 ",
       "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
       "price": 14.9,
       "category": "Women",
-      "id": 2
-    },
-    {
-      "title": "Levis Black Mens T-shirt",
-      "image": "https://i.pinimg.com/originals/fa/7e/31/fa7e31e180299c611b3b6c7c54c0b1cc.png",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "price": 29.9,
-      "category": "Men",
-      "id": 3
+      "id": 1
     }
   ]
 }

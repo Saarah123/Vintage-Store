@@ -17,7 +17,7 @@ return (
      
          <div className="right">
           <div>
-          <Link to = {"/"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >HOME</Button></Link> 
+          <Link to = {"/"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender", textDecoration:"none"}} className="shop" >HOME</Button></Link> 
           </div>
             <div>
           <Link to = {"/Shop"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >SHOP</Button></Link> 

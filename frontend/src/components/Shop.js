@@ -62,7 +62,7 @@ export const Shop = () => {
                 </h3>
                 <h4 style={{ fontSize: "12px", paddingLeft: "10px" }}>
                   {" "}
-                  Rs {ev.price}
+                  $ {ev.price}
                 </h4>
                 <Stack spacing={2}>
                   <Rating value={3.5} precision={0.5} size="small" />
