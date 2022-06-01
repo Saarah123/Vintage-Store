@@ -12,26 +12,36 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { useDispatch  , useSelector} from 'react-redux';
+import {SignupData} from '../redux/Action/SignUpAction';
 
 
 const theme = createTheme();
 
 export default function SignUp() {
-  
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+   const [state,setState] = useState({
+     fullname:"",
+     Contact:"",
+     email:"",
+     password:"",
+   })
+
+   const Dispatch = useDispatch()
+   const result = useSelector((store)=>store.SignupFatch)
+
+   const handleChange = (e) =>{
+     const {name,value} = e.target;
+    setState({...state,[name]:value})
+   }
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(state);
+    Dispatch(SignupData(state));
   };
 
-  const[FirstName, setFirstName] =  useState("");
-  const[LastName, setLastName] = useState("");
-  const[Email, setEmail] = useState("");
-  const[Password,setPassword] = useState("");
+ 
 
   return (
     
@@ -60,28 +70,28 @@ export default function SignUp() {
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} >
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="fullname"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
-                  value={FirstName}
-                  onChange = {(e) => setFirstName(e.target.value)}
+                  id="fullname"
+                  label="Full Name"
+                onChange={handleChange}
+                 
                   autoFocus
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} >
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  value={LastName}
-                  onChange = {(e) => setLastName(e.target.value)}
+                  id="Contact"
+                  label="Contact"
+                  name="Contact"
+                  onChange={handleChange}
+                  
                   autoComplete="family-name"
                 />
               </Grid>
@@ -92,8 +102,8 @@ export default function SignUp() {
                   id="email"
                   label="Email Address"
                   name="email"
-                  value={Email}
-                  onChange = {(e) => setEmail(e.target.value)}
+                  onChange={handleChange}
+                 
                   autoComplete="email"
                 />
               </Grid>
@@ -105,8 +115,8 @@ export default function SignUp() {
                   label="Password"
                   type="password"
                   id="password"
-                  value={Password}
-                  onChange = {(e) => setPassword(e.target.value)}
+                  onChange={handleChange}
+                 
                   autoComplete="new-password"
                 />
               </Grid>
@@ -117,7 +127,7 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Link to = {"/"}>
+            {/* <Link to = {"/LogIn"}> */}
             <Button
               type="submit"
               fullWidth
@@ -127,7 +137,7 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
-            </Link >
+            {/* </Link > */}
             
             <Grid container justifyContent="flex-end">
               <Grid item>

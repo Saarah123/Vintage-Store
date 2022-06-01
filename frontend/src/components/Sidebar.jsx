@@ -1,115 +1,73 @@
-import { Article, Group, Home, Storefront } from "@mui/icons-material";
+import React from 'react';
+import { Select, MenuItem, FormControl, InputLabel, Grid } from "@mui/material";
 import {
-  Box,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Button,
-  Stack,
-} from "@mui/material";
-import React from "react";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-import { ProductData } from "../redux/action";
+    GetData,
+    sort_name_ass,
+    sort_name_dis,
+    sort_price_h_to_l,
+    sort_price_l_to_h,
+    filter_by_catagory ,
+  } from "../redux/action";
+  import { useDispatch, useSelector } from "react-redux";
+  import { useEffect } from 'react';
+  
+  const Shorting = () => {
+      const [select, setSelect] = React.useState("");
+      
+      const Dispatch = useDispatch();
+      // const { Data } = useSelector((store) => store.productFetch);
 
 
-const Sidebar = () => {
-  const dispatch = useDispatch();
+  
+  
+       
+    const handleChange = (e) => {
+        setSelect(e.target.value);
+        if (e.target.value == "PriceAss") {
+          Dispatch(sort_price_l_to_h());
+        } else if (e.target.value == "PriceDis") {
+          Dispatch(sort_price_h_to_l());
+        } 
+        else if (e.target.value == "NameAss") {
+          Dispatch(sort_name_ass());
+        } else if (e.target.value == "NameDis") {
+          Dispatch(sort_name_dis());
+        } else if (e.target.value == "none") {
+          Dispatch(GetData());
+        }else if (e.target.value == "Men"){
+          Dispatch( filter_by_catagory (e.target.value))
+        }
+      };
 
-  const handleSorted = (query) => {
-    axios
-      .get(
-        `https://sakshi-store.herokuapp.com/products?_sort=price&_order=${query}`
-      )
-      .then(({ data }) => {
-       dispatch(ProductData(data))
-        
-      });
-  };
-  const handleSortedData = (order) => {
-    axios
-      .get(`https://sakshi-store.herokuapp.com/products?category=${order}`)
-      .then(({ data }) => {
-       console.log(data)
-       dispatch(ProductData(data))
-      });
-  };
-  const handleAllData = () => {
-    axios.get(`https://sakshi-store.herokuapp.com/products`).then(({ data }) => {
-     
-    });
-  };
 
-  return (
-    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box position="fixed">
-        <List sx={{bgcolor:"black", color:"white"}}>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Home  sx={{color:"white", fontSize:"30px" }}/>
-              </ListItemIcon>
-              <ListItemText primary="All Products" onClick={handleAllData} sx={{fontSize:"25px"}} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Article sx={{color:"white",fontSize:"30px" }} />
-                
-              </ListItemIcon>
-              <ListItemText
-                primary="Men's wear"
-                onClick={() => handleSortedData("Men")}
-                sx={{fontSize:"25px"}} 
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Group sx={{color:"white", fontSize:"30px" }}/>
-              </ListItemIcon>
-              <ListItemText
-                primary="Women's wear"
-                onClick={() => handleSortedData("Women")}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding sx={{fontSize:"250px"}}>
-            <ListItemButton sx={{fontSize:"250px"}}>
-              <ListItemIcon>
-                <Storefront sx={{color:"white" , fontSize:"30px"}} />
-              </ListItemIcon>
-              <ListItemText
-                primary="Electronics"
-                onClick={() => handleSortedData("Electronics")}
-                 size="large"
-              />
-            </ListItemButton>
-          </ListItem>
-        </List>
-        <Stack spacing={2} direction="column">
-          <Button
-            variant="contained"
-            sx={{ color: "white" , bgcolor:"black" ,fontSize:"20px" , marginTop : "6%"}}
-            onClick={() => handleSorted("asc")}
+
+    return (
+        <>
+        <FormControl sx={{ mt: 5  , minWidth: 150 }} size="small">
+          <InputLabel id="demo-select-small">Short</InputLabel>
+          <Select
+            labelId="demo-select-small"
+            id="demo-select-small"
+            value={select}
+            label="Short"
+            onChange={handleChange}
           >
-           PRICE +
-          </Button>
-          <Button
-            variant="contained"
-            sx={{ color: "white" ,  bgcolor:"black" ,fontSize:"20px" }}
-            onClick={() => handleSorted("desc")}
-          >
-            PRICE -
-          </Button>
-        </Stack>
-      </Box>
-    </Box>
-  );
-};
+            <MenuItem value={"none"}>
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={"NameAss"}>Name Ascending</MenuItem>
+            <MenuItem value={"NameDis"}>Name Descending</MenuItem>
+            <MenuItem value={"PriceAss"}>Price Ascending</MenuItem>
+            <MenuItem value={"PriceDis"}>Price Descending</MenuItem>
+            <MenuItem value={"Men"}>Men</MenuItem>
+            <MenuItem value={"Women"}>Women</MenuItem>
+            <MenuItem value={"Electronics"}>Electronics</MenuItem>
+          
+          </Select>
+        </FormControl>
 
-export default Sidebar;
+        </>
+    );
+}
+
+export default Shorting;

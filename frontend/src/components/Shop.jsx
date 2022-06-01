@@ -6,21 +6,26 @@ import { ProductData } from "../redux/action";
 import axios from "axios";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import { GetData} from "../redux/action";
+import Shorting from "./Sidebar";
 
+
+
+  
+  
 export const Shop = () => {
-  const dispatch = useDispatch();
-  const store = useSelector((e) => e.setprod);
-  console.log(store)
+ 
+  const Dispatch = useDispatch();
+    const {Data} = useSelector((Store) => Store.ProductFetch);
+    console.log(Data)
+    const data = useSelector((Store)=>Store.LoginFatch)
+  
+  
     
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    axios.get("https://sakshi-store.herokuapp.com/products").then(({ data }) => {
-    dispatch(ProductData(data)); 
-    });
-  }, []);
-
+    useEffect(() => {
+      Dispatch(GetData());
+    }, []);
   return (
     <>
       <div
@@ -29,12 +34,12 @@ export const Shop = () => {
         }}
       >
         <div style={{ flex: "1", marginTop: "5%" }}>
-          <Sidebar />
+          <Shorting />
         </div>
 
         <div className="cardiv">
           <div className="griddiv">
-            {store.map((ev) => (
+            {Data.map((ev) => (
               <Link to={`/ProductDetail/${ev.id}`}>
               <div
                 className="productdiv"

@@ -17,7 +17,7 @@ const Cart = () => {
  const handlecart=()=>{
     axios.get("https://sakshi-store.herokuapp.com/cart").then((res)=>{
         console.log(res)
-        setData(res.data)
+        setData([...res.data])
     }).catch((err)=>{
         console.log(err)
     })
@@ -62,7 +62,7 @@ console.log(price)
                 <p1><b>{e.price}</b></p1>
             </div>
             <div style={{marginTop:"8%"}}>
-            <button style={{marginTop:"5%", bgcolor:"blue"}} onClick={()=>Delete(e.id)}>REMOVE</button>
+            <button onClick={()=>Delete(e.id)}>REMOVE</button>
             </div>
 </div>
     ))}

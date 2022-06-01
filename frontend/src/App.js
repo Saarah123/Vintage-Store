@@ -8,6 +8,7 @@ import Payment from './components/Payment';
 import { ProductDetail } from './components/ProductDetail';
 import Cart from './components/Cart';
 import CheckOut from './components/CheckOut';
+import LogIn from './components/LogIn';
 
 
 
@@ -27,6 +28,7 @@ export default function App() {
      <Route path="/ProductDetail/:id" element={<ProductDetail/>}/>
      <Route path="/CheckOut" element={<CheckOut/>}/>
      <Route path="/Cart" element={<Cart/>}/>
+     <Route path="/LogIn" element={<LogIn/>}/>
      
      
      
