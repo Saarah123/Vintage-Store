@@ -127,7 +127,7 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            {/* <Link to = {"/LogIn"}> */}
+            <Link to = {"/LogIn"}>
             <Button
               type="submit"
               fullWidth
@@ -137,7 +137,7 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
-            {/* </Link > */}
+            </Link >
             
             <Grid container justifyContent="flex-end">
               <Grid item>
