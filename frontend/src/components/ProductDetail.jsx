@@ -11,33 +11,56 @@ import {useNavigate}  from 'react-router-dom';
 const [data,setData]=useState({})
     const {id} = useParams()
 
+    const [state,setState] = useState([]);
+
     useEffect(()=>{
-axios.get(`https://sakshi-store.herokuapp.com/products/${id}`).then((res)=>{
+axios.get(`https://sakshivintage.herokuapp.com/products/${id}`).then((res)=>{
     console.log(res)
-    setData(res.data)
+    setData({...res.data})
 }).catch((err)=>{
     console.log(err)
 })
     },[])
+ useEffect(() => {
+    axios.get("https://sakshivintage.herokuapp.com/cart").then((res)=>{
+                console.log(res)
+                setState([...res.data])
+            }).catch((err)=>{
+                console.log(err)
+            })
+       
+        
+ },[])
+ console.log(state);
+ 
+ const payload={
+    title:data.title,
+    image:data.image,
+    description:data.description,
+    price:data.price,
+    category:data.category
+    
+}
+     
+const CartData = JSON.parse(localStorage.getItem("myworldCart")) || [];
+const AddToCart = (e) => {
+ let CheckbagSameItemCount = 0;
+ for (let i = 0; i < CartData.length; i++) {
+   if (e.id === CartData[i].id) {
+     CheckbagSameItemCount += 1;
+     break;
+   }
+ }
+ if (CheckbagSameItemCount === 0) {
+   CartData.push(e);
+   localStorage.setItem("myworldCart", JSON.stringify(CartData));
+ } else {
+   alert("Item already added to Bag");
+ }
 
-
-    const handleCart = ()=>{
-
-        const payload={
-            title:data.title,
-            image:data.image,
-            description:data.description,
-            price:data.price,
-            category:data.category
-            
-        }
-        axios.post("https://sakshi-store.herokuapp.com/cart",payload).then((res)=>{
-            console.log(res)
-            navigate("/Cart")
-        }).catch((err)=>{
-            console.log(err)
-        })
-    }
+ localStorage.setItem("myworldCart", JSON.stringify(CartData));
+ 
+}; 
 
 console.log(data)
     return(
@@ -57,7 +80,7 @@ console.log(data)
                 <p>{data.description}</p>
                 <h3>$ {data.price}</h3>
 
-<button className='btn' onClick={handleCart}>Add to cart</button>
+<button className='btn' onClick={()=>AddToCart(data)}>Add to cart</button>
 
 
                </div>

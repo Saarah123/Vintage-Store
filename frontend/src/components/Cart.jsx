@@ -7,52 +7,53 @@ import axios from "axios"
 const Cart = () => {
 
 
-    const [data,setData] = useState([])
+    const [state,setState] = useState([])
 
- useEffect(()=>{
-    handlecart()
+//  useEffect(()=>{
+//     handlecart()
    
- },[])
+//  },[])
 
- const handlecart=()=>{
-    axios.get("https://sakshi-store.herokuapp.com/cart").then((res)=>{
-        console.log(res)
-        setData([...res.data])
-    }).catch((err)=>{
-        console.log(err)
-    })
- }
+ useEffect(() => {
+    const cartdata = JSON.parse(localStorage.getItem("myworldCart"));
 
+    setState([...cartdata]);
+  }, []);
 
- const Delete=(id)=>{
-     axios.delete(`https://sakshi-store.herokuapp.com/cart/${id}`).then((res)=>{
-         
-         handlecart()
-
-     }).catch((err) => {
-         console.log(err)
-     })
- }
- const price  = data.reduce((acc,curr)=>{
+ 
+//  const price  = data.reduce((acc,curr)=>{
         
-    return Math.floor(acc + +curr.price)
+//     return Math.floor(acc + +curr.price)
 
-},0)
+// },0)
 
-console.log(price)
+// console.log(price)
+console.log(state);
 
+const Delete = (index) => {
+    state.splice(index, 1);
+    localStorage.setItem("myworldCart", JSON.stringify(state));
 
+    let newData = JSON.parse(localStorage.getItem("myworldCart"));
+    setState([...newData]);
+   
+  };
 
+  var sum = 0
     return(
 <>
+
 <div className='top'>
     <a href=" https://vintagedancer.com/1950s/1950s-fashion-women-get-look/ " target="_blank" rel="noopener noreferrer"><h3><b>ABOUT</b></h3></a>
      
     </div>
     <div className='body1'>
         <div className='cart' >
-    {data.map((e)=>(
-        <div className='left'>
+    {state.map((e)=>{
+
+    
+        sum += e.price;
+       return<> <div className='left' key={e.id}>
             <div   className="img">
                 <h3>ITEM</h3>
                 <img style={{width:"130px" , height:"220px",marginTop:"16%" }} src={e.image} alt="" />
@@ -62,16 +63,17 @@ console.log(price)
                 <p1><b>{e.price}</b></p1>
             </div>
             <div style={{marginTop:"8%"}}>
-            <button onClick={()=>Delete(e.id)}>REMOVE</button>
+            <button onClick={()=>Delete(e.i)}>REMOVE</button>
             </div>
 </div>
-    ))}
+</>
+})}
 
 
 <div className='right'>
     <p1>PRICE</p1>
     <p1>QUANTITY</p1>
-    <p1>TOTAL :- {price}</p1>
+    <p1>TOTAL :- {sum}</p1>
 
     
 </div>

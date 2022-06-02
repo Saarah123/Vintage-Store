@@ -15,7 +15,7 @@ export const logout = () =>({ type: LOGOUT })
 
 export const LoginData = (login )=>(Dispatch)=>{
     Dispatch(loginPanding())
-    axios.post("http://localhost:8080/login" , login).then((res)=>{
+    axios.post("https://sakshi-backend.herokuapp.com/login" , login).then((res)=>{
      alert("Log In Success")
         setTimeout(() => {
             Dispatch(loginSuccess(res.data.user)) 

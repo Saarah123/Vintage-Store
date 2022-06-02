@@ -12,7 +12,10 @@
         "XXL"
       ],
       "price": 29.9,
-      "category": "Women"
+      "category": "Women",
+   
+      "quantity": 1
+     
     },
     {
       "id": 2,
@@ -27,6 +30,8 @@
       ],
       "price": 18.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 3,
@@ -40,6 +45,8 @@
       ],
       "price": 14.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 4,
@@ -51,6 +58,8 @@
       ],
       "price": 25.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 5,
@@ -64,7 +73,9 @@
       ],
       "price": 10.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 6,
       "image": "https://images.express.com/is/image/expressfashion/0022_04777196_2028?cache=on&wid=361&fmt=jpeg&qlt=75,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon ",
@@ -77,7 +88,9 @@
       ],
       "price": 49.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 7,
       "image": "https://i.pinimg.com/originals/fa/7e/31/fa7e31e180299c611b3b6c7c54c0b1cc.png",
@@ -89,7 +102,9 @@
       ],
       "price": 29.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 8,
       "image": "https://www.fashionkibatain.com/wp-content/uploads/2018/03/mens-summer-fashion-2018-loungewear-2.jpg",
@@ -102,7 +117,9 @@
       ],
       "price": 18.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 9,
       "image": "https://i5.walmartimages.com/asr/41e14822-1e5d-4f7f-9bda-3bc5f264d4a8.695e8ae876b53efaebf555e6b7488ae6.jpeg ",
@@ -114,6 +131,8 @@
         "L"
       ],
       "price": 14.9,
+      
+      "quantity": 1,
       "category": "Electronics"
     },
     {
@@ -125,6 +144,8 @@
         "XL"
       ],
       "price": 25.9,
+      
+      "quantity": 1,
       "category": "Electronics"
     },
     {
@@ -138,7 +159,8 @@
         "XL"
       ],
       "price": 10.9,
-      "category": "Electronics"
+      "category": "Electronics ",
+      "quantity": 1
     },
     {
       "id": 12,
@@ -150,12 +172,13 @@
         "XXL"
       ],
       "price": 49.9,
-      "category": "Electronics"
+     "category": "Electronics" ,
+     "quantity": 1
     },
     {
       "id": 13,
-      "image": "https://th.bing.com/th/id/OIP.YTcaeSOGi7vfxsSRCVHEZgHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7 ",
-      "title": "Midi sundress with shirring ",
+      "image": "https://th.bing.com/th/id/OIP.OttifCv1Qr6uQGII6kKcpAHaJ3?pid=ImgDet&rs=1  ",
+      "title": "Black Midi Dress",
       "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
       "availableSizes": [
         "XS",
@@ -165,10 +188,12 @@
       ],
       "price": 29.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 14,
-      "image": "https://th.bing.com/th/id/OIP.t7SHrY0snOpd3ItITt4LzQHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7 ",
+      "image": " https://th.bing.com/th/id/R.a78e6733d9574c975eba699f84db9d48?rik=z2AGzx7bpK5npw&riu=http%3a%2f%2fwww.soma.com%2fProduct_Images%2f2570132750_544_large.jpg%3fresize%3d1000px%3a*%26output-quality%3d85&ehk=CyMHP2K6M8HENWoBrZlvzGovZTwC%2fVTapWZtMT8mUhg%3d&risl=&pid=ImgRaw&r=0",
       "title": "Midi with ruched front",
       "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
       "availableSizes": [
@@ -179,10 +204,12 @@
       ],
       "price": 18.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 15,
-      "image": " https://th.bing.com/th/id/OIP.AP5cf8vwmm-dszMBKpBZSAHaLz?w=184&h=294&c=7&r=0&o=5&pid=1.7 ",
+      "image": "https://i.pinimg.com/originals/b2/1e/c1/b21ec105f70e601921952405a5c47d90.jpg  ",
       "title": "Midi dress in pink ditsy floral",
       "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
       "availableSizes": [
@@ -192,10 +219,12 @@
       ],
       "price": 14.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 16,
-      "image": "https://th.bing.com/th/id/OIP.k_gy5PwiE0Gj9dgym0wiFAHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7 ",
+      "image": "https://images.asos-media.com/products/brave-soul-holly-wrap-dress/8280629-1-indigo?$n_640w$&wid=513&fit=constrain  ",
       "title": "cami maxi dress in polka dot",
       "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
       "availableSizes": [
@@ -203,6 +232,8 @@
       ],
       "price": 25.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 17,
@@ -216,7 +247,9 @@
       ],
       "price": 10.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 18,
       "image": " https://th.bing.com/th/id/OIP.M1ZEnY0FFGsFLTn2JEsl4wHaIk?pid=ImgDet&w=1555&h=1800&rs=1",
@@ -229,7 +262,9 @@
       ],
       "price": 49.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 19,
       "image": "https://i.pinimg.com/originals/53/2e/0f/532e0fd99d118ec449e4d9c8892d8a23.jpg ",
@@ -241,7 +276,9 @@
       ],
       "price": 29.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 20,
       "image": "https://th.bing.com/th/id/R.73674de5536a25a3664024ffce03c377?rik=xTAJIPkOO2iidQ&riu=http%3a%2f%2fcdna.lystit.com%2fphotos%2f2011%2f09%2f14%2ftheory-black-dress-shirt-product-2-1988745-261706227.jpeg&ehk=9eSJJB%2fRvx4LHa1O0cV%2bpw%2fZozKeMqE%2fuyuMX%2beqxVk%3d&risl=&pid=ImgRaw&r=0 ",
@@ -254,7 +291,9 @@
       ],
       "price": 18.9,
       "category": "Men"
-    },
+    ,
+      "quantity": 1},
+
     {
       "id": 21,
       "image": "https://th.bing.com/th/id/OIP.utacUlqSfz02TqrImCJwUgHaHa?w=183&h=183&c=7&r=0&o=5&pid=1.7  ",
@@ -266,7 +305,8 @@
         "L"
       ],
       "price": 14.9,
-      "category": "Electronics"
+    "category": "Electronics" ,
+    "quantity": 1
     },
     {
       "id": 22,
@@ -278,6 +318,8 @@
       ],
       "price": 25.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 23,
@@ -291,6 +333,8 @@
       ],
       "price": 10.9,
       "category": "Women"
+    ,
+      "quantity": 1
     },
     {
       "id": 24,
@@ -303,6 +347,8 @@
       ],
       "price": 49.9,
       "category": "Women"
+    ,
+      "quantity": 1
     }
   ],
   "cart": [

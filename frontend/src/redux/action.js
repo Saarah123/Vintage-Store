@@ -33,7 +33,7 @@ export const ProductData = (payload) => ({type:SETPRODUCT, payload})
 
 export  const GetData = ()=>(Dispatch)=>{
     Dispatch(product_loding())
-   axios.get("https://sakshi-store.herokuapp.com/products").then((res)=>{
+   axios.get("https://sakshivintage.herokuapp.com/products").then((res)=>{
            console.log(res.data)
    Dispatch(product_success(res.data))
    }).catch((err)=>{
