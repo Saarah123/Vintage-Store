@@ -1,4 +1,4 @@
-<h1>Sakshi' s Vintage Store </h1><br>
+<h1> Vintage Store </h1><br>
 <h3>This is an ecommerce website where user can buyproducts like Mens  , Womens clothes & Electronic as well by  applying  filters as per your need and in just a few clicks you can buy any products from the website .</h3>
 <h2>Features</h2>
 Login/Signup User Account<br>
@@ -22,6 +22,7 @@ Backend<br>
 <table>
    <tr>
     <td><h4>Signup</h4><img src="https://miro.medium.com/max/700/1*fDFemj9h4cXF7IaIgI3d5Q.png" alt="Signup" /></td>
+    
   </tr>
   <tr>
     <td><h4>Home</h4><img src="https://miro.medium.com/max/700/1*0_35WTxhDKdL-JkN5vdQjA.png" alt="home" /></td>
