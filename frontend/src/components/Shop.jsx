@@ -28,6 +28,10 @@ export const Shop = () => {
     }, []);
   return (
     <>
+     <div className='top'>
+    <a href=" https://vintagedancer.com/1950s/1950s-fashion-women-get-look/ " target="_blank" rel="noopener noreferrer"><h3><b>ABOUT</b></h3></a>
+     
+    </div>
       <div
         style={{
           display: "flex",
@@ -62,9 +66,9 @@ export const Shop = () => {
                     alignItems: "center",
                   }}
                 />
-                <h3 style={{ fontSize: "14px", paddingLeft: "10px" }}>
-                {ev.title}
-                </h3>
+                <h2 style={{ fontSize: "14px", paddingLeft: "10px" , color:"black"}}>
+                <b>{ev.title}</b>
+                </h2>
                 <h4 style={{ fontSize: "12px", paddingLeft: "10px" }}>
                   {" "}
                   $ {ev.price}
@@ -82,6 +86,7 @@ export const Shop = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };

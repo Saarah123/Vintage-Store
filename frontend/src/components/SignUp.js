@@ -135,7 +135,7 @@ export default function SignUp() {
               sx={{ mt: 3, mb: 2 }}
               // onClick={() => navigate("/Home")}
             >
-              Sign Up
+            <b> Sign Up</b>
             </Button>
             </Link >
             

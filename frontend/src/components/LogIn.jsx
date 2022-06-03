@@ -20,6 +20,7 @@ import {LoginData} from "../redux/Action/LogInAction";
 
 function Copyright(props) {
   return (
+    
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
@@ -63,7 +64,12 @@ const handleChange = (e)=>{
 
 
   return (
+    
     <ThemeProvider theme={theme}>
+      <div className='top'>
+    <a href=" https://vintagedancer.com/1950s/1950s-fashion-women-get-look/ " target="_blank" rel="noopener noreferrer"><h3><b>ABOUT</b></h3></a>
+     
+    </div>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -134,6 +140,10 @@ const handleChange = (e)=>{
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
+      <div className='footer'>
+        <b>   All right is reserved .</b>
+     
+    </div>
     </ThemeProvider>
   );
         }

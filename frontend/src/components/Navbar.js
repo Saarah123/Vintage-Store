@@ -12,18 +12,18 @@ return (
   <div className="Navbar">
     <div className="left">
 
-      <h3 className="label">SAKSHI'S VINTAGE STORE</h3>
+      <h3 className="label"><i>SAKSHI'S VINTAGE STORE</i></h3>
     </div>
      
          <div className="right">
           <div>
-          <Link to = {"/"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender", textDecoration:"none"}} className="shop" >HOME</Button></Link> 
+          <Link to = {"/"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender", textDecoration:"none"}} className="shop" ><i>HOME</i></Button></Link> 
           </div>
             <div>
-          <Link to = {"/Shop"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >SHOP</Button></Link> 
+          <Link to = {"/Shop"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>SHOP</i></Button></Link> 
           </div>
           <div>
-          <Link to = {"/SignUp"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" >SIGN UP</Button></Link>
+          <Link to = {"/SignUp"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>SIGN UP</i></Button></Link>
           </div>
           <div>
           <Link to = {"/Cart"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="cart" >CART</Button></Link>

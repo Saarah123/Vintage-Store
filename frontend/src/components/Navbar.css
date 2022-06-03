@@ -15,6 +15,13 @@
     background-color: aliceblue;
   
 }
+.left1{
+    height:80px;
+    width:40%;
+    color:black;
+    background-color: aliceblue;
+  
+}
 
 
 .right{
@@ -105,11 +112,12 @@
     border:transparent;
     margin-left:43%;
     margin-top: 2%;
+    border-radius: 20px;
 }
 .btn:hover{
     
     background-color: rgb(59, 214, 235);
-    transform:scale(1.25);
+    transform:scale(1.05);
     
 }
 /* media queries */
@@ -243,6 +251,18 @@
           
 
       }
+      .detail1{
+        height:400px;
+        width:650px;
+        border: 1px solid transparent;
+        margin-left:4%;
+        margin-top:3%;
+        display:flex;
+        gap:10px;
+        background-color: white;
+        
+
+    }
       .imgx{
           height:100;
           width:40%;
@@ -260,7 +280,7 @@
         width:auto;
         border:1px transparent;
         margin-top: 1%;
-        background-color: rgb(248, 217, 222);
+        background-color:pink;
        
        
     }
@@ -288,17 +308,21 @@
         border:transparent;
         margin-left:35%;
         margin-top: 1%;
+        border-radius: 10px;
     }
     .btn1:hover{
        background-color:rgb(57, 204, 204);
     }
     /* CART */
  .cart{
-    height :"60px" ;
+    height :"30px" ;
      width:"100%" ;
     display:"flex";
      gap:"30px";
-     border:1px solid black;
+     border:1px solid transparent;
        background-color:"black" ;
          
- }   
+ }  
+ .kk:hover{
+     transform:scale(1.05);
+ } 

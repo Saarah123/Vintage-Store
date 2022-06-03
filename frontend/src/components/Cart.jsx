@@ -2,7 +2,8 @@ import { bgcolor } from '@mui/system';
 import react,{useEffect,useState} from 'react';
 import "./Navbar.css";
 import {Link} from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
+import {Box} from "@mui/system";
 
 const Cart = () => {
 
@@ -20,7 +21,36 @@ const Cart = () => {
     setState([...cartdata]);
   }, []);
 
- 
+  const quentityInc = (id) => {
+    let temp = [...state];
+    temp = temp.filter((e) => {
+      if (e.id == id) {
+        e.quantity = e.quantity + 1;
+      }
+      return e;
+    });
+    localStorage.setItem("myworldCart", JSON.stringify([...temp]));
+
+    let newData = JSON.parse(localStorage.getItem("myworldCart"));
+    setState([...newData]);
+   
+  };
+  const quentityDic = (id) => {
+    let temp = [...state];
+    temp = temp.filter((e) => {
+
+      if (e.id == id) {
+          if(e.quantity >1){
+        e.quantity = e.quantity - 1;
+      }}
+      return e;
+    });
+    localStorage.setItem("myworldCart", JSON.stringify([...temp]));
+
+    let newData = JSON.parse(localStorage.getItem("myworldCart"));
+    setState([...newData]);
+
+  };
 //  const price  = data.reduce((acc,curr)=>{
         
 //     return Math.floor(acc + +curr.price)
@@ -52,18 +82,24 @@ const Delete = (index) => {
     {state.map((e)=>{
 
     
-        sum += e.price;
-       return<> <div className='left' key={e.id}>
-            <div   className="img">
-                <h3>ITEM</h3>
-                <img style={{width:"130px" , height:"220px",marginTop:"16%" }} src={e.image} alt="" />
-            </div>
-            <div className="details">
-                <p1>{e.title}</p1><br/>
-                <p1><b>{e.price}</b></p1>
+        sum += e.price*e.quantity;
+       return<> <div className='left1' key={e.id}>
+            {/* <div   className="lll"> */}
+                
+                <img style={{width:"130px" , height:"200px" }} src={e.image} alt="" />
+            {/* </div> */}
+            <div className="details1">
+                <p1><b>{e.title}</b></p1><br/>
+                <p1><b>${e.price}</b></p1>
             </div>
             <div style={{marginTop:"8%"}}>
-            <button onClick={()=>Delete(e.i)}>REMOVE</button>
+            <button className = "kk" style={{ "borderRadius":"5px", "backgroundColor":"black" , "color":"white"}} onClick={()=>Delete(e.i)}>REMOVE</button>
+            <div style={{"display":"flex", "gap":"10px"}}>
+            <button className = "kk"style={{"width":"25px" ,"height":"20px" , "margin-top":"20px" , "borderRadius":"5px", "backgroundColor":"black" , "color":"white"}} onClick={()=>quentityInc(e.id)}>+</button>
+            <h4>{e.quantity}</h4>
+            <button className = "kk" style={{"width":"25px" ,"height":"20px","margin-top":"20px" ,"borderRadius":"5px", "backgroundColor":"black" , "color":"white"}}onClick={()=>quentityDic(e.id)}>-</button>   
+            </div>
+           
             </div>
 </div>
 </>

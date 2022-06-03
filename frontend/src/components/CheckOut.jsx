@@ -10,7 +10,7 @@ const CheckOut = () => {
      
     </div>
     <div className='body'>
-<h2 sx={{margin:"auto"}}>CHECK OUT</h2>
+<h2 style={{marginLeft:"43%"}}><i>CHECK OUT</i></h2>
 <div className='form'>
     <input
      className='input'

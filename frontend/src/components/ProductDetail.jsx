@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import {useNavigate}  from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
  export const ProductDetail = () => {
 
@@ -76,12 +77,12 @@ console.log(data)
                    <img src={data.image} style={{width:"100%",height:"100%",objectFit:"cover"}} alt="" />
                </div>
                <div className='detail2'>
-                <h3>{data.title}</h3>
-                <p>{data.description}</p>
+                <h2>{data.title}</h2>
+                <p><b>{data.description}</b></p>
                 <h3>$ {data.price}</h3>
-
+<Link to={"/Cart"}>
 <button className='btn' onClick={()=>AddToCart(data)}>Add to cart</button>
-
+</Link>
 
                </div>
 

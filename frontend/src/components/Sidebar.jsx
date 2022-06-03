@@ -43,8 +43,8 @@ import {
 
     return (
         <>
-        <FormControl sx={{ mt: 5  , minWidth: 150 }} size="small">
-          <InputLabel id="demo-select-small">Short</InputLabel>
+        <FormControl style={{ mt: 5  , minWidth: 200 ,  backgroundColor:"lavender" , color:"white", marginTop:"16%"}} size="small">
+          <InputLabel id="demo-select-small" ><b>SORT</b></InputLabel>
           <Select
             labelId="demo-select-small"
             id="demo-select-small"
@@ -59,10 +59,7 @@ import {
             <MenuItem value={"NameDis"}>Name Descending</MenuItem>
             <MenuItem value={"PriceAss"}>Price Ascending</MenuItem>
             <MenuItem value={"PriceDis"}>Price Descending</MenuItem>
-            <MenuItem value={"Men"}>Men</MenuItem>
-            <MenuItem value={"Women"}>Women</MenuItem>
-            <MenuItem value={"Electronics"}>Electronics</MenuItem>
-          
+            
           </Select>
         </FormControl>
 
