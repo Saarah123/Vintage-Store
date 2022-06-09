@@ -1,5 +1,7 @@
 import React from 'react';
-import { Select, MenuItem, FormControl, InputLabel, Grid } from "@mui/material";
+import { Button } from '@mui/material';
+import { Select, MenuItem, FormControl, InputLabel, Grid, Box } from "@mui/material";
+import {Link} from "react-router-dom";
 import {
     GetData,
     sort_name_ass,
@@ -39,6 +41,7 @@ import {
         }
       };
 
+      
 
 
     return (
@@ -60,8 +63,22 @@ import {
             <MenuItem value={"PriceAss"}>Price Ascending</MenuItem>
             <MenuItem value={"PriceDis"}>Price Descending</MenuItem>
             
+            
           </Select>
+         
         </FormControl>
+        <Box m={5} mt={20} sx={{display:"flex" , flexDirection:"column" , width:"100px", gap:"10px" }}>
+          <Button  variant = "contained" ><Link style={{color:"pink"}}  to={"/category/Men"}>
+            Men
+          </Link></Button>
+          <Button variant = "contained"><Link style={{color:"pink"}}  to={"/category/Women"}>
+          Women
+          </Link></Button>
+          <Button variant = "contained"><Link style={{color:"pink"}}  to={"/category/Electronics"}>
+          Electronics
+          </Link>  </Button>
+          </Box>
+
 
         </>
     );

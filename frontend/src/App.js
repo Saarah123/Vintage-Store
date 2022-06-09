@@ -9,6 +9,7 @@ import { ProductDetail } from './components/ProductDetail';
 import Cart from './components/Cart';
 import CheckOut from './components/CheckOut';
 import LogIn from './components/LogIn';
+import Filter from './components/Filter';
 
 
 
@@ -29,7 +30,7 @@ export default function App() {
      <Route path="/CheckOut" element={<CheckOut/>}/>
      <Route path="/Cart" element={<Cart/>}/>
      <Route path="/LogIn" element={<LogIn/>}/>
-     
+     <Route  path='/category/:category'  element={<Filter/>}/>
      
      
      
