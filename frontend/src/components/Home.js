@@ -15,12 +15,12 @@ const Home = () => {
     <div className='body'>
     
     <img height="700px" src="https://i.pinimg.com/originals/5c/7a/51/5c7a515af18946223d48e930e4763508.jpg" alt="" ></img>
-    <img height="700px"src="https://bashooka.com/wp-content/uploads/2017/06/fashion-email-template-6.jpg " alt="" ></img>
+    <img height="700px"src="https://karlacolletto.com/site/wp-content/uploads/2015/03/CarrieBradshaw11.jpg " alt="" ></img>
     <img height="700px"src="https://cdn.dribbble.com/users/526105/screenshots/7165953/bw-large-dribbble_4x.png " alt="" ></img>
     </div>
-    <div className='footer'>
+    {/* <div className='footer'>
      <b>All right is reserved.</b>
-    </div>
+    </div> */}
     </>
   )
 };

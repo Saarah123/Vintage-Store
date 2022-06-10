@@ -12,7 +12,7 @@ return (
   <div className="Navbar">
     <div className="left">
 
-      <h3 className="label"><i>SAKSHI'S VINTAGE STORE</i></h3>
+   <Link to={"/"}> <h3 className="label"><i>SAKSHI'S VINTAGE STORE</i></h3></Link>  
     </div>
      
          <div className="right">
@@ -23,10 +23,10 @@ return (
           <Link to = {"/Shop"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>SHOP</i></Button></Link> 
           </div>
           <div>
-          <Link to = {"/SignUp"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>SIGN UP</i></Button></Link>
+          <Link to = {"/Cart"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>CART</i></Button></Link>
           </div>
           <div>
-          <Link to = {"/Cart"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="cart" >CART</Button></Link>
+          <Link to = {"/SignUp"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>SIGN UP</i></Button></Link>
           </div>
           </div> 
        
