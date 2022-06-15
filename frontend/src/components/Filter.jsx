@@ -28,23 +28,23 @@ export default function Filter() {
   const Dispatch = useDispatch();
 
 
-  const handleChange = (e) => {
-    setSelect(e.target.value);
-    if (e.target.value == "PriceAss") {
-      Dispatch(sort_price_l_to_h());
-    } else if (e.target.value == "PriceDis") {
-      Dispatch(sort_price_h_to_l());
-    } 
-    else if (e.target.value == "NameAss") {
-      Dispatch(sort_name_ass());
-    } else if (e.target.value == "NameDis") {
-      Dispatch(sort_name_dis());
-    } else if (e.target.value == "none") {
-      Dispatch(GetData());
-    }else if (e.target.value == "Men"){
-      Dispatch( filter_by_catagory (e.target.value))
-    }
-  };
+  // const handleChange = (e) => {
+  //   setSelect(e.target.value);
+  //   if (e.target.value == "PriceAss") {
+  //     Dispatch(sort_price_l_to_h());
+  //   } else if (e.target.value == "PriceDis") {
+  //     Dispatch(sort_price_h_to_l());
+  //   } 
+  //   else if (e.target.value == "NameAss") {
+  //     Dispatch(sort_name_ass());
+  //   } else if (e.target.value == "NameDis") {
+  //     Dispatch(sort_name_dis());
+  //   } else if (e.target.value == "none") {
+  //     Dispatch(GetData());
+  //   }else if (e.target.value == "Men"){
+  //     Dispatch( filter_by_catagory (e.target.value))
+  //   }
+  // };
 
   useEffect(() => {
     axios

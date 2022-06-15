@@ -4,12 +4,15 @@ import "./Navbar.css";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import {Box} from "@mui/system";
+import { useSelector } from 'react-redux';
 
 const Cart = () => {
 
 
     const [state,setState] = useState([])
-
+    const Data = useSelector((store) => store.LoginFatch) 
+    console.log(Data);
+   
 //  useEffect(()=>{
 //     handlecart()
    
@@ -115,7 +118,8 @@ const Delete = (index) => {
 </div>
         </div>
     </div>
-    <Link to = {"/CheckOut"}><button className="btn">CHECK OUT</button></Link>
+
+    <Link to = {Data.isLogged == true ? "/CheckOut" :"/SignUp"}><button className="btn">CHECK OUT</button></Link>
 
 
     <div className='footer'>
