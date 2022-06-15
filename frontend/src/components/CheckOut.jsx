@@ -1,14 +1,48 @@
-import react from 'react';
+import * as React from 'react';
+
 import "./Navbar.css";
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 const CheckOut = () => {
     const navigate = useNavigate()
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-            navigate("/Payment")
+    // const handleSubmit=(e)=>{
+    //     e.preventDefault();
+    //         navigate("/Payment")
 
+    //   }
+   
+
+    const [ formData , setFormData] = useState({
+        name : "",
+        mobile : "",
+        email :"",
+        address: ""
+    })
+
+      const HandleChange = (e) => {
+
+        const {id,value} = e.target;
+        setFormData({...formData , [id] : value})
+      
+    }
+
+    const HandleSubmit = () => {
+
+      
+      console.log(formData.email)
+
+      if(formData.name !=="" && formData.email !== "" && formData.mobile !== "" && formData.address !== ""   ){
+       
+        navigate("/Payment")
+        //  localStorage.removeItem(formData);
       }
+      
+      else{
+          alert("Invalid Credential !")
+      }
+  }
+
       
     return(
 <>
@@ -18,37 +52,41 @@ const CheckOut = () => {
     </div>
     <div className='body'>
 <h2 style={{marginLeft:"43%"}}><i>CHECK OUT</i></h2>
-<div className='form'>
+<form className='form' onSubmit={HandleSubmit}>
     <input
      className='input'
     placeholder='NAME*'
-    name="name" 
+    id="name" 
     required
+     onChange={HandleChange}
     />
 
     <input
     className='input'
       placeholder='Mobile No.*'
-      name="mobile"
+      id="mobile"
+      onChange={HandleChange}
       required />
 
       <input
        className='input'
       placeholder='E-mail*'
-      name="e-mail"
+      id="email"
+      onChange={HandleChange}
       required />
 
       <input
        className='input'
       placeholder='Address*'
-      name="address" 
+      id="address" 
+      onChange={HandleChange}
       required
       />
 
 {/* <Link to ="/Payment"><button className='btn1'>Payment</button></Link> */}
 
-<input type="submit" value="Payment" onClick={handleSubmit} />
-</div>
+<input type="submit" value="Payment" onClick={HandleSubmit} />
+</form>
 
     </div>
 

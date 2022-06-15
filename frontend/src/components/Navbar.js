@@ -28,6 +28,9 @@ return (
           <div>
           <Link to = {"/SignUp"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>SIGN UP</i></Button></Link>
           </div>
+          <div>
+          <Link to = {"/LogIn"} > <Button style={{color:"pink",  fontSize:"17px", hover:"lavender",}} className="shop" ><i>LOG IN</i></Button></Link>
+          </div>
           </div> 
        
        </div>
