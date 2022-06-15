@@ -1,8 +1,15 @@
 import react from 'react';
 import "./Navbar.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CheckOut = () => {
+    const navigate = useNavigate()
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+            navigate("/Payment")
+
+      }
+      
     return(
 <>
 <div className='top'>
@@ -15,24 +22,32 @@ const CheckOut = () => {
     <input
      className='input'
     placeholder='NAME*'
-    name="name" />
+    name="name" 
+    required
+    />
 
     <input
     className='input'
       placeholder='Mobile No.*'
-      name="mobile" />
+      name="mobile"
+      required />
 
       <input
        className='input'
       placeholder='E-mail*'
-      name="e-mail" />
+      name="e-mail"
+      required />
 
       <input
        className='input'
       placeholder='Address*'
-      name="address" />
+      name="address" 
+      required
+      />
 
-<Link to ="/Payment"><button className='btn1'>Payment</button></Link>
+{/* <Link to ="/Payment"><button className='btn1'>Payment</button></Link> */}
+
+<input type="submit" value="Payment" onClick={handleSubmit} />
 </div>
 
     </div>
