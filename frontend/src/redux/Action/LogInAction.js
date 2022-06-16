@@ -1,5 +1,5 @@
 import axios from "axios";
-// import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const LOGIN_PANDING = "LOGIN_PANDING"
@@ -14,16 +14,17 @@ export const loginSuccess = (payload) =>({type:LOGIN_SUCCESS , payload})
 export const logout = () =>({ type: LOGOUT })
 
 export const LoginData = (login )=>(Dispatch)=>{
+    console.log(login);
     Dispatch(loginPanding())
-    axios.post("https://sakshi-backend.herokuapp.com/login" , login).then((res)=>{
-     alert("Log In Success")
+    axios.post("https://backend1242.herokuapp.com/auth/Login",login).then((res)=>{
+       
         setTimeout(() => {
             Dispatch(loginSuccess(res.data.user)) 
         }, 1000);
     }).catch((err)=>{
         setTimeout(() => {
             Dispatch(loginError())     
-        }, 3000);
-      alert("error");
+        }, 1000);
+       
     })
 }

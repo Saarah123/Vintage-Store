@@ -46,7 +46,7 @@ export default function SignIn() {
    const Navigate = useNavigate()
    const Data = useSelector((store)=>store.LoginFatch)
    if(Data.isLogged === true){
-       Navigate("/")
+       Navigate("/Shop")
    }
 
 const handleChange = (e)=>{
@@ -55,7 +55,7 @@ const handleChange = (e)=>{
 }
 
 
-
+console.log(Data);
 
  const handleSubmit = (event) => {
    event.preventDefault();

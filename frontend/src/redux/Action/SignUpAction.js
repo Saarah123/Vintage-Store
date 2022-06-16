@@ -13,7 +13,7 @@ export const signupSuccess = (paylod) =>({type:SIGNUP_SUCCESS , paylod})
 
 export const SignupData = (signup)=>(Dispatch)=>{
     Dispatch(signupPanding())
-    axios.post("https://sakshi-backend.herokuapp.com/signup" , signup).then((res)=>{
+    axios.post("https://backend1242.herokuapp.com/auth/Signup", signup).then((res)=>{
         alert("signup Success")
         console.log(res.data.user)
         Dispatch(signupSuccess(res.data.user))
