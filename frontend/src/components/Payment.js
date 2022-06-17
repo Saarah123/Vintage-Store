@@ -45,7 +45,7 @@ export default function Payment() {
 
   return (
     <>
-    <h1 id="mycart" style={{marginLeft:"35%"}}>Enter Your Card Details</h1>
+    <h1  style={{marginLeft:"35%"}}>Enter Your Card Details</h1>
     <div className="paymentBox" >
     <Box 
       sx={{

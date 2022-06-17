@@ -5,145 +5,135 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
+import {Link} from "react-router-dom";
+import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {useState} from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import {LoginData} from "../redux/Action/LogInAction";
+import { ToastContainer, toast } from 'react-toastify';
 
-
-function Copyright(props) {
-  return (
-    
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const theme = createTheme();
 
-export default function SignIn() {
-  const [state, setstate] = useState({
-    email:"",
-    password:""
-  });
+export default function SignInSide() {
+
+   const [state, setstate] = useState({
+     email:"",
+     password:""
+   });
 
 
-  
-  const Dispatch = useDispatch()
-   const Navigate = useNavigate()
-   const Data = useSelector((store)=>store.LoginFatch)
-   if(Data.isLogged === true){
-       Navigate("/Shop")
-   }
+   const notify1 = () => toast("login Success...");
+   const notify2 = () => toast("login Failed !");
+    
+   const Dispatch = useDispatch()
+    const Navigate = useNavigate()
+    const Data = useSelector((store)=>store.LoginFatch)
+    if(Data.isLogged === true){
+        Navigate("/CheckOut")
+    }
 
-const handleChange = (e)=>{
-    let {id , value} = e.target;
-    setstate({...state , [id]:value})
-}
+ const handleChange = (e)=>{
+     let {id , value} = e.target;
+     setstate({...state , [id]:value})
+ }
+
+ 
 
 
-console.log(Data);
-
- const handleSubmit = (event) => {
-   event.preventDefault();
-   Dispatch(LoginData(state ))
- };
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    Dispatch(LoginData(state , notify1 , notify2))
+  };
 
   return (
-    
     <ThemeProvider theme={theme}>
-      <div className='top'>
-    <a href=" https://vintagedancer.com/1950s/1950s-fashion-women-get-look/ " target="_blank" rel="noopener noreferrer"><h3><b>ABOUT</b></h3></a>
-     
-    </div>
-      <Container component="main" maxWidth="xs">
+      <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
-        <Box
+        <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
           sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: (t) =>
+              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-              onChange={handleChange}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              onChange={handleChange}
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-             <Link to = {"/CheckOut"}>
-            <Button
-           
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
-            </Link>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
+        />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <Box
+            sx={{
+              my: 8,
+              mx: 4,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              Sign in
+            </Typography>
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+                autoFocus
+                onChange={handleChange}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                onChange={handleChange}
+                autoComplete="current-password"
+              />
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
+              />
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 , backgroundColor: "red"}}
+              >
+                Sign In
+              </Button>
+              <Grid container>
+                <Grid item>
+                  <Link to={"/signIn"} style={{textDecoration:"none" , color:'#1976d2'} } variant="body2">
+                    "Don't have an account? Sign Up"
+                  </Link>
+                </Grid>
               </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
+            </Box>
           </Box>
-        </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
-      </Container>
-      <div className='footer'>
-        <b>   All right is reserved .</b>
-     
-    </div>
+        </Grid>
+      </Grid> 
+      <ToastContainer/>
     </ThemeProvider>
+   
   );
-        }
+}
