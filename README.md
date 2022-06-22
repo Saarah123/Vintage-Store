@@ -19,7 +19,6 @@ Backend<br>
  
  ## Glimpses of website :
 
-<!-- 
 <table>
    <tr>
     <td><h4>Signup</h4><img src="https://miro.medium.com/max/700/1*fDFemj9h4cXF7IaIgI3d5Q.png" alt="Signup" /></td>
@@ -39,7 +38,7 @@ Backend<br>
   </tr>
   
 </table>
- -->
+ 
 <br />
 
 
